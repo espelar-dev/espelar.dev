@@ -1,3 +1,4 @@
+import { Link } from "gatsby";
 import * as React from "react";
 
 type HeroButtonTypeProps = {
@@ -7,7 +8,9 @@ type HeroButtonTypeProps = {
 
 const HeroButton = ({ type, text }: HeroButtonTypeProps) => {
   return (
-    <button className={`hero-button ${type}`}>{text}</button>
+    <button type="button" className={`hero-button ${type}`}>
+      <Link className="navlink-button-text" to="">{text}</Link>
+    </button>
   )
 }
 

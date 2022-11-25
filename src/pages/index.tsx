@@ -9,7 +9,7 @@ const IndexPage = () => {
     <main className="index">
       <NavBar />
       <Content />
-      <Footer />
+      {/* <Footer /> */}
     </main>
   );
 };
