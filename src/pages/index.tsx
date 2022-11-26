@@ -4,12 +4,13 @@ import Footer from "../components/organisms/Footer";
 import NavBar from "../components/organisms/NavBar";
 import "../styles.css"
 
+const pageName = "index";
+
 const IndexPage = () => {
   return (
-    <main className="index">
+    <main className={pageName}>
       <NavBar />
-      <Content />
-      {/* <Footer /> */}
+      <Content pageName={pageName} />
     </main>
   );
 };

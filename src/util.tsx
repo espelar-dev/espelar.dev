@@ -14,7 +14,7 @@ export const linkPath = (string: string) => {
   let result = "/" + words[0];
 
   if (string === "home") {
-    result = "";
+    result = "/";
   } else {
     for (let i = 1; i < words.length; i += 1) {
       result += `-${words[i]}`

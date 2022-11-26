@@ -1,8 +1,29 @@
 import * as React from "react";
 
-const HeroParagraphRegular = ({ text }: { text: string }) => {
+type HeroParagraphRegularProps = {
+  text: string;
+  pageName: string;
+}
+
+type HeroParagraphRegularClassName = {
+  heroParagraphRegularClassName: string;
+}
+
+const HeroParagraphRegular = ({ text, pageName }: HeroParagraphRegularProps) => {
+  let classNames: HeroParagraphRegularClassName;
+
+  if (pageName === "about") {
+    classNames = {
+      heroParagraphRegularClassName: "hero-paragraph-regular-about"
+    }
+  } else {
+    classNames = {
+      heroParagraphRegularClassName: "hero-paragraph-regular"
+    }
+  }
+
   return (
-    <p className="hero-paragraph-regular">{text}</p>
+    <p className={classNames.heroParagraphRegularClassName}>{text}</p>
   )
 }
 

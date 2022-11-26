@@ -3,7 +3,7 @@ import * as React from "react";
 
 type HeroButtonTypeProps = {
   type: "primary" | "secondary";
-  text: string;
+  text: string | undefined;
 }
 
 const HeroButton = ({ type, text }: HeroButtonTypeProps) => {
