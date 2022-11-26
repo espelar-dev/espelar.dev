@@ -1,15 +1,18 @@
 import * as React from "react";
+import { useContext } from "react";
+import { PageNameContext } from "../../context/page-name-context";
 
 type HeroParagraphRegularProps = {
   text: string;
-  pageName: string;
 }
 
 type HeroParagraphRegularClassName = {
   heroParagraphRegularClassName: string;
 }
 
-const HeroParagraphRegular = ({ text, pageName }: HeroParagraphRegularProps) => {
+const HeroParagraphRegular = ({ text }: HeroParagraphRegularProps) => {
+  const { pageName, setPageName } = useContext(PageNameContext);
+
   let classNames: HeroParagraphRegularClassName;
 
   if (pageName === "about") {

@@ -2,10 +2,9 @@ import * as React from "react";
 
 type HeroParagraphBoldProps = {
   text: string;
-  pageName: string;
 }
 
-const HeroParagraphBold = ({ text, pageName }: HeroParagraphBoldProps) => {
+const HeroParagraphBold = ({ text }: HeroParagraphBoldProps) => {
   return (
     <p className="hero-paragraph-bold">{text}</p>
   )

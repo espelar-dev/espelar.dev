@@ -1,15 +1,18 @@
 import * as React from "react";
+import { useContext } from "react";
+import { PageNameContext } from "../../context/page-name-context";
 
 type HeroHeadingProps = {
   text: string;
-  pageName: string;
 }
 
 type HeroHeadingClassName = {
   heroHeadingClassName: string;
 }
 
-const HeroHeading = ({ text, pageName }: HeroHeadingProps) => {
+const HeroHeading = ({ text }: HeroHeadingProps) => {
+  const { pageName, setPageName } = useContext(PageNameContext);
+
   let classNames: HeroHeadingClassName;
 
   if (pageName === "about") {

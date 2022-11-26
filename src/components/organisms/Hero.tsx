@@ -1,7 +1,9 @@
 import * as React from "react";
+import { useContext } from "react";
 import Space from "../atoms/Space";
 import HeroButtonGroup from "../molecules/HeroButtonGroup";
 import HeroTextGroup from "../molecules/HeroTextGroup";
+import { PageNameContext } from "../../context/page-name-context";
 
 export type TextProps = {
   heroHeading: Array<string>;
@@ -21,14 +23,16 @@ export type HeroProps = {
 
 export type HeroContentProps = {
   content: HeroProps;
-  pageName: string;
+  // pageName: string;
 }
 
 type HeroClassName = {
   heroClassName: string;
 }
 
-const Hero = ({ content, pageName }: HeroContentProps) => {
+const Hero = ({ content }: HeroContentProps) => {
+  const { pageName, setPageName } = useContext(PageNameContext);
+
   let classNames: HeroClassName;
 
   if (pageName === "about") {
@@ -43,7 +47,7 @@ const Hero = ({ content, pageName }: HeroContentProps) => {
 
   return (
     <div className={classNames.heroClassName}>
-      <HeroTextGroup text={content.text} pageName={pageName} />
+      <HeroTextGroup text={content.text} />
       <Space />
       <Space />
       <HeroButtonGroup btnText={content.btnText} />
