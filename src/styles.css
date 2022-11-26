@@ -35,7 +35,7 @@ a {
   background-size: cover;
   border-radius: 5px;  
   margin: auto;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
 }
 
 .navbar {
@@ -151,23 +151,12 @@ a {
   margin: 0px 20px;
 }
 
-.hero .hero-button-group {
-  justify-content: space-between;
-  /* position: absolute; */
-  /* bottom: 40px; */
-  display: flex;
-  align-items:flex-end;
-
-  /* display: inline-block; */
-  align-self: flex-start;
-  /* margin-left: 40px; */
-  
-}
-
 .hero-button {
   margin-right: 10px;
-  width: 140px;
+  width: 80vw;
   height: 45px;
+
+  margin-bottom: 15px;
 }
 
 .hero-button.primary {
@@ -208,7 +197,20 @@ a {
   padding-top: 25px;
 }
 
-/* Tablets (portrait) */
+/* --- Mobile (landscape) --- */
+@media only screen and (min-width: 800px) and (orientation: landscape) { 
+  .hero {
+    border-radius: 30px 30px 200px 30px;
+  }
+
+  .hero-button {
+    margin-right: 10px;
+    width: 140px;
+    height: 45px;
+  }
+}
+
+/* --- Tablets (portrait) --- */
 @media only screen and (min-width: 800px) and (min-height: 600px) {  
   .navbar {
     width: 70vw;
@@ -245,7 +247,7 @@ a {
     flex-flow: column;
     height: 100%;
   
-    width: 100vw;
+    width: 90vw;
     
     max-width: 835px;
     /* max-height: 500px; */
@@ -294,9 +296,15 @@ a {
     align-self: flex-start;
     /* margin-left: 40px; */
   }
+
+  .hero-button {
+    margin-right: 10px;
+    width: 140px;
+    height: 45px;
+  }
 }
 
-/* Tablets (landscape) and Laptops */
+/* --- Tablets (landscape) and Laptops --- */
 @media only screen and (min-width: 950px) {  
   .navbar {
     /* width: 50vw; */
@@ -359,7 +367,23 @@ a {
   }
 
   .hero .hero-button-group {
+    justify-content: space-between;
+    /* position: absolute; */
+    /* bottom: 40px; */
+    display: flex;
+    align-items:flex-end;
+  
+    /* display: inline-block; */
+    align-self: flex-start;
+    /* margin-left: 40px; */
+
     position: absolute;
-    bottom: 50px;
+    bottom: 50px;    
+  }
+
+  .hero-button {
+    margin-right: 10px;
+    width: 140px;
+    height: 45px;
   }
 }
