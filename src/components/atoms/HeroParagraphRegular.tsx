@@ -1,6 +1,7 @@
 import * as React from "react";
 import { useContext } from "react";
 import { PageNameContext } from "../../context/page-name-context";
+import { ThemeContext } from "../../context/theme-context";
 
 type HeroParagraphRegularProps = {
   text: string;
@@ -12,6 +13,7 @@ type HeroParagraphRegularClassName = {
 
 const HeroParagraphRegular = ({ text }: HeroParagraphRegularProps) => {
   const { pageName, setPageName } = useContext(PageNameContext);
+  const { theme, setTheme } = useContext(ThemeContext);
 
   let classNames: HeroParagraphRegularClassName;
 
@@ -24,6 +26,8 @@ const HeroParagraphRegular = ({ text }: HeroParagraphRegularProps) => {
       heroParagraphRegularClassName: "hero-paragraph-regular"
     }
   }
+
+  console.log(pageName);
 
   return (
     <p className={classNames.heroParagraphRegularClassName}>{text}</p>

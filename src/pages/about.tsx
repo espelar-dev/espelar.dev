@@ -1,24 +1,13 @@
-import * as React from "react"
-import { useState } from "react";
-import Content from "../components/organisms/Content"
-import NavBar from "../components/organisms/NavBar"
-import { PageNameContext } from "../context/page-name-context";
-import "../styles.css"
-
-// const pageName = "about";
+import * as React from "react";
+import Layout from "../components/layouts/layout";
+import "../styles.css";
 
 const AboutPage = () => {
-  const [pageName, setPageName] = useState("about");
-
   return (
-    <PageNameContext.Provider value={{ pageName, setPageName }}>
-      <main className={pageName}>
-        <NavBar />
-        <Content />
-      </main>
-    </PageNameContext.Provider>
-  )
-}
+    <Layout page="about" />
+  );
+};
+
 export const Head = () => <title>About</title>
 
 export default AboutPage
