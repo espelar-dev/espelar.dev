@@ -1,8 +1,8 @@
 import * as React from "react";
 import { Link } from "gatsby";
-import Content from "../organisms/Content";
-import NavBar from "../organisms/NavBar";
-import { PageNameContext } from "../../context/page-name-context";
+import Content from "../components/organisms/Content";
+import NavBar from "../components/organisms/NavBar";
+import { PageNameContext } from "../context/page-name-context";
 import { useState, useEffect } from "react";
 
 type PageProps = {
