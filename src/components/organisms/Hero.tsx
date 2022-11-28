@@ -32,18 +32,33 @@ type HeroClassName = {
 
 const Hero = ({ content }: HeroContentProps) => {
   const { pageName, setPageName } = useContext(PageNameContext);
+  const themeType = localStorage.getItem("theme") || "light";
 
   let classNames: HeroClassName;
 
-  if (pageName === "about") {
-    classNames = {
-      heroClassName: "hero-about"
+  if (themeType === "light") {
+    if (pageName === "about") {
+      classNames = {
+        heroClassName: "hero-about"
+      }
+    } else {
+      classNames = {
+        heroClassName: "hero"
+      }
     }
   } else {
-    classNames = {
-      heroClassName: "hero"
+    if (pageName === "about") {
+      classNames = {
+        heroClassName: "hero-about-dark"
+      }
+    } else {
+      classNames = {
+        heroClassName: "hero-dark"
+      }
     }
   }
+
+  
 
   return (
     <div className={classNames.heroClassName}>

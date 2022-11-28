@@ -10,14 +10,29 @@ type PageProps = {
   children?: any;
 }
 
+type LayoutClassName = {
+  layoutClassName: string;
+}
+
 const Layout = ({ page }: PageProps) => {
   const [pageName, setPageName] = useState(page);
+  const themeType = localStorage.getItem("theme") || "light";
 
-  // useEffect(() => setPageName(page), [page]);
+  let classNames: LayoutClassName;
+
+  if (themeType === "light") {
+    classNames = {
+      layoutClassName: "main"
+    }
+  } else {
+    classNames = {
+      layoutClassName: "main-dark"
+    }
+  }
 
   return (
     <PageNameContext.Provider value={{ pageName, setPageName }}>
-      <main className={pageName}>
+      <main className={classNames.layoutClassName}>
         <NavBar />
         <Content />
       </main>

@@ -14,7 +14,7 @@ type HeroTextGroupProps = {
 const HeroTextGroup = ({ text }: HeroTextGroupProps) => {
   const { pageName, setPageName } = useContext(PageNameContext);
 
-  const heroHeading = text.heroHeading.map((item: string) => <HeroHeading text={item} />);
+  const heroHeading = text.heroHeading.map((item: string) => <HeroHeading key={item} text={item} />);
 
   let heroParagraphBold;
   let heroParagraphRegular;
@@ -25,8 +25,8 @@ const HeroTextGroup = ({ text }: HeroTextGroupProps) => {
       <Space />
     </>));
   } else {
-    heroParagraphBold = text?.heroParagraphBold?.map((item: string) => <HeroParagraphBold text={item} />);
-    heroParagraphRegular = text?.heroParagraphRegular?.map((item: string) => <HeroParagraphRegular text={item} />);
+    heroParagraphBold = text?.heroParagraphBold?.map((item: string) => <HeroParagraphBold key={item} text={item} />);
+    heroParagraphRegular = text?.heroParagraphRegular?.map((item: string) => <HeroParagraphRegular key={item} text={item} />);
   }
 
   return (

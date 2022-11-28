@@ -12,16 +12,29 @@ type HeroHeadingClassName = {
 
 const HeroHeading = ({ text }: HeroHeadingProps) => {
   const { pageName, setPageName } = useContext(PageNameContext);
+  const themeType = localStorage.getItem("theme") || "light";
 
   let classNames: HeroHeadingClassName;
 
-  if (pageName === "about") {
-    classNames = {
-      heroHeadingClassName: "hero-heading-about"
+  if (themeType === "light") {
+    if (pageName === "about") {
+      classNames = {
+        heroHeadingClassName: "hero-heading-about"
+      }
+    } else {
+      classNames = {
+        heroHeadingClassName: "hero-heading"
+      }
     }
   } else {
-    classNames = {
-      heroHeadingClassName: "hero-heading"
+    if (pageName === "about") {
+      classNames = {
+        heroHeadingClassName: "hero-heading-about"
+      }
+    } else {
+      classNames = {
+        heroHeadingClassName: "hero-heading-dark"
+      }
     }
   }
 

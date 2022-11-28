@@ -1,4 +1,5 @@
 import * as React from "react";
+import IconTheme from "../atoms/IconTheme";
 import NavLink from "../atoms/NavLink";
 
 const Nav = () => {
@@ -7,6 +8,7 @@ const Nav = () => {
       <NavLink type="link" text="home" />
       <NavLink type="link" text="about" />
       <NavLink type="button" text="contact us" />
+      <IconTheme />
     </div>
   )
 }
