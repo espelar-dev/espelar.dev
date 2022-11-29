@@ -12,7 +12,7 @@ const Content = () => {
     heroContent = {
       text: {
         heroHeading: [
-          "We’re espelar.dev"
+          "We're espelar.dev"
         ],
         heroParagraphRegular: [
           "espelar.dev was born out of a vision to provide purpose-driven high-quality design and development consulting & services to leaders with visionary ideas but wanting for access to the right knowledge and resources to bring their projects to life.",

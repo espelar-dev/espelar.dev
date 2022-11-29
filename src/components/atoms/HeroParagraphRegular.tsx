@@ -38,8 +38,6 @@ const HeroParagraphRegular = ({ text }: HeroParagraphRegularProps) => {
     }
   }
 
-
-
   return (
     <p className={classNames.heroParagraphRegularClassName}>{text}</p>
   )

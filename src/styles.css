@@ -34,6 +34,11 @@ a {
 .logo-container {
   display: flex;
   align-items: center;
+  border: none;
+  text-decoration: none; 
+  background: none;
+  text-decoration: none; 
+  background: none;
 }
 
 .logo {
@@ -58,9 +63,6 @@ a {
 .icon-theme-container {
     display: flex;
     align-items: center;
-    border: none;
-    text-decoration: none; 
-    background: none;
     border: none;
     text-decoration: none; 
     background: none;
@@ -147,6 +149,45 @@ a {
   padding: 40px 20px;
 }
 
+.hero {
+  animation: fadein 1.5s;
+  -moz-animation: fadein 1.5s; /* Firefox */
+  -webkit-animation: fadein 1.5s; /* Safari and Chrome */
+  -o-animation: fadein 1.5s; /* Opera */
+}
+@keyframes fadein {
+  from {
+    opacity:0;
+  }
+  to {
+    opacity:1;
+  }
+}
+@-moz-keyframes fadein { /* Firefox */
+  from {
+    opacity:0;
+  }
+  to {
+    opacity:1;
+  }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+  from {
+    opacity:0;
+  }
+  to {
+    opacity:1;
+  }
+}
+@-o-keyframes fadein { /* Opera */
+  from {
+    opacity:0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .hero-dark {
   display: flex;
   flex-flow: column;
@@ -156,6 +197,45 @@ a {
   background: #18181c;
   border-radius: 30px 30px 30px 30px;
   padding: 40px 20px;
+}
+
+.hero-dark {
+  animation: fadein 1s;
+  -moz-animation: fadein 1s; /* Firefox */
+  -webkit-animation: fadein 1s; /* Safari and Chrome */
+  -o-animation: fadein 1s; /* Opera */
+}
+@keyframes fadein {
+  from {
+    opacity:0.7;
+  }
+  to {
+    opacity:1;
+  }
+}
+@-moz-keyframes fadein { /* Firefox */
+  from {
+    opacity:0.7;
+  }
+  to {
+    opacity:1;
+  }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+  from {
+    opacity:0.7;
+  }
+  to {
+    opacity:1;
+  }
+}
+@-o-keyframes fadein { /* Opera */
+  from {
+    opacity:0.7;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .hero-about {
@@ -169,6 +249,45 @@ a {
   padding: 40px 20px;
 }
 
+.hero-about {
+  animation: fadein 1s;
+  -moz-animation: fadein 1s; /* Firefox */
+  -webkit-animation: fadein 1s; /* Safari and Chrome */
+  -o-animation: fadein 1s; /* Opera */
+}
+@keyframes fadein {
+  from {
+    opacity:0.7;
+  }
+  to {
+    opacity:1;
+  }
+}
+@-moz-keyframes fadein { /* Firefox */
+  from {
+    opacity:0.7;
+  }
+  to {
+    opacity:1;
+  }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+  from {
+    opacity:0.7;
+  }
+  to {
+    opacity:1;
+  }
+}
+@-o-keyframes fadein { /* Opera */
+  from {
+    opacity:0.7;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .hero-about-dark {
   display: flex;
   flex-flow: column;
@@ -178,6 +297,45 @@ a {
   background: #18181c;
   border-radius: 30px 30px 30px 30px;
   padding: 40px 20px;
+}
+
+.hero-about-dark {
+  animation: fadein 1s;
+  -moz-animation: fadein 1s; /* Firefox */
+  -webkit-animation: fadein 1s; /* Safari and Chrome */
+  -o-animation: fadein 1s; /* Opera */
+}
+@keyframes fadein {
+  from {
+    opacity:0.7;
+  }
+  to {
+    opacity:1;
+  }
+}
+@-moz-keyframes fadein { /* Firefox */
+  from {
+    opacity:0.7;
+  }
+  to {
+    opacity:1;
+  }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+  from {
+    opacity:0.7;
+  }
+  to {
+    opacity:1;
+  }
+}
+@-o-keyframes fadein { /* Opera */
+  from {
+    opacity:0.7;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .hero-heading {
@@ -300,6 +458,16 @@ a {
 
 /* --- Tablets (portrait) --- */
 @media only screen and (min-width: 800px) and (min-height: 600px) {  
+  .logo {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    background-position: center;
+    background-size: cover;
+    margin: auto;
+    margin-bottom: 0px;
+  }
+
   .icon-theme {
     width: 20px;
     height: 20px;
@@ -506,6 +674,7 @@ a {
     object-fit: cover;
     background-position: center;
     background-size: cover;
+    margin: auto;
     margin-bottom: 0px;
   }
 

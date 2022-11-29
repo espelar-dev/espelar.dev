@@ -4,6 +4,7 @@ import Content from "../components/organisms/Content";
 import NavBar from "../components/organisms/NavBar";
 import { PageNameContext } from "../context/page-name-context";
 import { useState, useEffect } from "react";
+import Calendly from "../components/atoms/Calendly";
 
 type PageProps = {
   page: string;
@@ -30,11 +31,19 @@ const Layout = ({ page }: PageProps) => {
     }
   }
 
+  const pageContent = () => {
+    if (page === "contact-us") {
+      return <Calendly />
+    } else {
+      return <Content />
+    }
+  }
+
   return (
     <PageNameContext.Provider value={{ pageName, setPageName }}>
       <main className={classNames.layoutClassName}>
         <NavBar />
-        <Content />
+        {pageContent()}
       </main>
     </PageNameContext.Provider>
   )

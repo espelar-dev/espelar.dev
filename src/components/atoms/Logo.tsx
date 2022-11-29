@@ -1,11 +1,12 @@
+import { Link } from "gatsby";
 import * as React from "react";
 import logo from "../../images/logo.png";
 
 const Logo = () => {
   return (
-    <div className="logo-container">
+    <Link className="logo-container" to="/">
       <img className="logo" src={logo} />
-    </div>
+    </Link>
   )
 }
 

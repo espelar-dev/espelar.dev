@@ -5,6 +5,7 @@ import { linkPath, linkText } from "../../util";
 type NavLinkProps = {
   text: string;
   type: "link" | "button";
+  onClick?: any;
 };
 
 type NavLinkClassName = {
