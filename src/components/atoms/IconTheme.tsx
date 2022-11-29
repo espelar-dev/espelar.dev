@@ -4,7 +4,7 @@ import iconSunRegularDark from "../../images/icon-sun-regular-dark.svg";
 import iconMoonRegular from "../../images/icon-moon-regular.svg";
 
 const IconTheme = () => {
-  const themeType = typeof window !== "undefined" && (localStorage.getItem("theme") || "light");
+  const themeType = typeof window === "undefined" ? "light" : (localStorage.getItem("theme") || "light");
 
   const [theme, setTheme] = useState(themeType);
 
