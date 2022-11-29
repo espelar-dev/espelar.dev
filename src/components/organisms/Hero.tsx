@@ -32,7 +32,7 @@ type HeroClassName = {
 
 const Hero = ({ content }: HeroContentProps) => {
   const { pageName, setPageName } = useContext(PageNameContext);
-  const themeType = localStorage.getItem("theme") || "light";
+  const themeType = typeof window !== "undefined" && localStorage.getItem("theme") || "light";
 
   let classNames: HeroClassName;
 
@@ -58,7 +58,7 @@ const Hero = ({ content }: HeroContentProps) => {
     }
   }
 
-  
+
 
   return (
     <div className={classNames.heroClassName}>

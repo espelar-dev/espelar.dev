@@ -12,7 +12,7 @@ type HeroHeadingClassName = {
 
 const HeroHeading = ({ text }: HeroHeadingProps) => {
   const { pageName, setPageName } = useContext(PageNameContext);
-  const themeType = localStorage.getItem("theme") || "light";
+  const themeType = typeof window !== "undefined" && localStorage.getItem("theme") || "light";
 
   let classNames: HeroHeadingClassName;
 
