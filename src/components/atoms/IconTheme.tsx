@@ -9,8 +9,8 @@ const IconTheme = () => {
   const [theme, setTheme] = useState(themeType);
 
   const toggleTheme = (themeType: string) => {
-    setTheme(themeType);
     window.location.reload();
+    setTheme(themeType);
     localStorage.setItem("theme", themeType);
   };
 
