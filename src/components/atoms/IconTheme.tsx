@@ -4,7 +4,7 @@ import iconSunRegularDark from "../../images/icon-sun-regular-dark.svg";
 import iconMoonRegular from "../../images/icon-moon-regular.svg";
 
 const IconTheme = () => {
-  const themeType = typeof window !== "undefined" && localStorage.getItem("theme") || "dark";
+  const themeType = typeof window !== "undefined" && localStorage.getItem("theme") || "light";
 
   const [theme, setTheme] = useState(themeType);
 
@@ -16,6 +16,8 @@ const IconTheme = () => {
     }
   };
 
+  console.log(theme)
+
   return (
     <>
       {theme === "dark" &&
@@ -24,7 +26,7 @@ const IconTheme = () => {
           onClick={() => toggleTheme("light")}>
           <img className="icon-theme" src={iconSunRegularDark} />
         </button>}
-      {theme === "light" &&
+      {(theme === "light" || !theme) &&
         <button
           className="icon-theme-container"
           onClick={() => toggleTheme("dark")}>
