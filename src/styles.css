@@ -58,6 +58,7 @@ a {
   object-fit: cover;
   background-position: center;
   background-size: cover; 
+  cursor: pointer;
 }
 
 .icon-theme-container {
@@ -475,6 +476,7 @@ a {
     background-position: center;
     background-size: cover;  
     margin-left: 20px;
+    cursor: pointer;
   }
   
   .navbar {
@@ -685,6 +687,7 @@ a {
     background-position: center;
     background-size: cover;  
     margin-left: 20px;
+    cursor: pointer;
   }
   
   .navbar {
