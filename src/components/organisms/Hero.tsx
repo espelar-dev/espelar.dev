@@ -38,7 +38,7 @@ const Hero = ({ content }: HeroContentProps) => {
 
   let classNames: HeroClassName;
 
-  if (themeType === "light") {
+  if (themeType === "light" || !themeType) {
     if (pageName === "about") {
       classNames = {
         heroClassName: "hero-about"

@@ -23,7 +23,7 @@ const Layout = ({ page }: PageProps) => {
 
   let classNames: LayoutClassName;
 
-  if (themeType === "light") {
+  if (themeType === "light" || !themeType) {
     classNames = {
       layoutClassName: "main"
     }

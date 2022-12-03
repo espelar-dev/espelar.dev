@@ -18,7 +18,7 @@ const HeroHeading = ({ text }: HeroHeadingProps) => {
 
   let classNames: HeroHeadingClassName;
 
-  if (themeType === "light") {
+  if (themeType === "light" || !themeType) {
     if (pageName === "about") {
       classNames = {
         heroHeadingClassName: "hero-heading-about"

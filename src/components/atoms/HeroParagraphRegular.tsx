@@ -18,7 +18,7 @@ const HeroParagraphRegular = ({ text }: HeroParagraphRegularProps) => {
 
   let classNames: HeroParagraphRegularClassName;
 
-  if (themeType === "light") {
+  if (themeType === "light" || !themeType) {
     if (pageName === "about") {
       classNames = {
         heroParagraphRegularClassName: "hero-paragraph-regular-about"

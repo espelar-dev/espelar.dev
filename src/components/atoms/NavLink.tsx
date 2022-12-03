@@ -19,7 +19,7 @@ const NavLink = ({ type, text }: NavLinkProps) => {
 
   let classNames: NavLinkClassName;
 
-  if (themeType === "light") {
+  if (themeType === "light" || !themeType) {
     classNames = {
       navlinkLinkTextClassName: "navlink-link-text",
       navlinkButtonTextClassName: "navlink-button-text"
