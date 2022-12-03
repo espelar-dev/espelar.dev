@@ -14,7 +14,8 @@ type NavLinkClassName = {
 }
 
 const NavLink = ({ type, text }: NavLinkProps) => {
-  const themeType = typeof window !== "undefined" && localStorage.getItem("theme") || "light";
+  if (typeof window === "undefined") return null;
+  const themeType = localStorage.getItem("theme");
 
   let classNames: NavLinkClassName;
 

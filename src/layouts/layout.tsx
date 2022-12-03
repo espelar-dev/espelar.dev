@@ -17,7 +17,9 @@ type LayoutClassName = {
 
 const Layout = ({ page }: PageProps) => {
   const [pageName, setPageName] = useState(page);
-  const themeType = typeof window !== "undefined" && localStorage.getItem("theme") || "light";
+
+  if (typeof window === "undefined") return null;
+  const themeType = localStorage.getItem("theme");
 
   let classNames: LayoutClassName;
 

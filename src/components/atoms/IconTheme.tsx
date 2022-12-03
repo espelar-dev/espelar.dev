@@ -4,14 +4,23 @@ import iconSunRegularDark from "../../images/icon-sun-regular-dark.svg";
 import iconMoonRegular from "../../images/icon-moon-regular.svg";
 
 const IconTheme = () => {
-  const themeType = typeof window === "undefined" ? "light" : (localStorage.getItem("theme") || "light");
+  if (typeof window === "undefined") return null;
+
+  let themeType;
+
+  if (localStorage.getItem("theme")) {
+    themeType = localStorage.getItem("theme");
+  } else {
+    themeType = "light";
+    localStorage.setItem("theme", "light");
+  }
 
   const [theme, setTheme] = useState(themeType);
 
   const toggleTheme = (themeType: string) => {
-    window.location.reload();
     setTheme(themeType);
     localStorage.setItem("theme", themeType);
+    window.location.reload();
   };
 
   return (

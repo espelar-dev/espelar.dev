@@ -12,7 +12,9 @@ type HeroParagraphRegularClassName = {
 
 const HeroParagraphRegular = ({ text }: HeroParagraphRegularProps) => {
   const { pageName, setPageName } = useContext(PageNameContext);
-  const themeType = typeof window !== "undefined" && localStorage.getItem("theme") || "light";
+
+  if (typeof window === "undefined") return null;
+  const themeType = localStorage.getItem("theme");
 
   let classNames: HeroParagraphRegularClassName;
 
